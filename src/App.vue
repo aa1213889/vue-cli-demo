@@ -1,43 +1,29 @@
 <template>
   <v-app>
     <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+      <div class="top_toolbar">
+        <div class="top_toolbar_item">商城</div>
+        <div class="top_toolbar_item">IOT</div>
+        <div class="top_toolbar_item">云服务</div>
+        <div class="top_toolbar_item">金融</div>
+        <div class="top_toolbar_item">有品</div>
+        <div class="top_toolbar_item">企业团购</div>
       </div>
-
-      <v-spacer></v-spacer>
     </v-app-bar>
-
     <v-content>
-      <NyanPass />
+      <HomePage />
     </v-content>
   </v-app>
 </template>
 
 <script>
-import NyanPass from "./components/NyanPass";
+import HomePage from "./components/Home";
 
 export default {
   name: "App",
 
   components: {
-    NyanPass
+    HomePage
   },
 
   data: () => ({
@@ -45,3 +31,12 @@ export default {
   })
 };
 </script>
+<style scoped>
+ .top_toolbar{
+   display: flex;
+ }
+ .top_toolbar_item{
+   padding-left: 0.5em;
+   cursor: pointer;
+ }
+</style>
