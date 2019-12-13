@@ -9,8 +9,11 @@
 </template>
 
 <script>
+
 export default {
-  name: "NyanPass",
+  name: "HomePage",
+  components: {
+  },
   props: {
     msg: String
   },
@@ -28,7 +31,6 @@ export default {
   height: 100px;
   margin-right: auto;
   margin-left: auto;
-  background: black;
 }
 .homepage {
   padding: 0px 25px;
