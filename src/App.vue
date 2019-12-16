@@ -1,21 +1,24 @@
 <template>
   <v-app>
     <v-content>
-      <HomePage />
-      <MenuItem />
+      <div class="content">
+         <MenuItem />
+         <HomePage />
+      </div>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HomePage from "./components/Home"
-import MenuItem from "./components/MenuItem"
+import HomePage from "./components/Home";
+import MenuItem from "./components/MenuItem";
 
 export default {
   name: "App",
 
   components: {
-    HomePage,MenuItem
+    HomePage,
+    MenuItem
   },
 
   data: () => ({
@@ -24,11 +27,9 @@ export default {
 };
 </script>
 <style scoped>
- .top_toolbar{
-   display: flex;
- }
- .top_toolbar_item{
-   padding-left: 0.5em;
-   cursor: pointer;
- }
+.content{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
 </style>

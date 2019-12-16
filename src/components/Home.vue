@@ -26,13 +26,10 @@ export default {
 </script>
 
 <style scoped>
-.header {
-  width: 1226px;
-  height: 100px;
-  margin-right: auto;
-  margin-left: auto;
-}
+
 .homepage {
-  padding: 0px 25px;
+ flex: 1;
+ background: blue;
+     overflow: hidden;
 }
 </style>
