@@ -9,9 +9,15 @@
       </div>
       <hr class="divider" />
       <div class="menu_content_item">
-        <div class="content_item_row">
-          <div class="item_row_logo"></div>
-          <div class="item_row_title">输入框</div>
+        <div
+          class="content_item_row"
+          v-for="item in menuArr"
+          @click="menuClick(item.name)"
+          v-bind:class="{active_row:item.name === nowSelect}"
+          :key="item.name"
+        >
+          <div class="item_row_logo" v-bind:class="item.icon"></div>
+          <div class="item_row_title">{{item.name}}</div>
         </div>
       </div>
       <div class="menu_content_bottombar"></div>
@@ -25,13 +31,13 @@ export default {
   components: {},
   data() {
     return {
+      nowSelect: "Input",
       menuArr: [
-        { name: "输入框", url: "" },
-        { name: "选择框", url: "" },
-        { name: "日历", url: "" },
-        { name: "树形菜单", url: "" },
-        { name: "表格", url: "" },
-        { name: "表格", url: "" }
+        { name: "Input", icon: "icon_input" },
+        { name: "SelectBox", icon: "icon_selectbox" },
+        { name: "Calendar", icon: "icon_calendar" },
+        { name: "TreeList", icon: "icon_treelist" },
+        { name: "TableGrid", icon: "icon_tablegrid" }
       ]
     };
   },
@@ -41,6 +47,9 @@ export default {
   methods: {
     clickLink: function() {
       this.$router.push("./sb");
+    },
+    menuClick: function(name) {
+      this.nowSelect = name; //点击当前元素添加class 去掉兄弟的class
     }
   }
 };
@@ -72,8 +81,7 @@ export default {
 }
 .divider {
   border-color: hsla(0, 0%, 70.6%, 0.3);
-  margin-left: 20px;
-  margin-right: 20px;
+  width: 240px;
 }
 .content_logo_font {
   height: unset;
@@ -103,7 +111,7 @@ export default {
 .menu_content_item {
   width: 90%;
   height: calc(100% - 200px);
-  border: solid 1px salmon;
+  /* border: solid 1px salmon; */
   padding-top: 20px;
 }
 .content_item_row {
@@ -112,10 +120,44 @@ export default {
   padding: 10px 15px;
   height: 50px;
   cursor: pointer;
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+}
+.content_item_row:hover {
+  background-color: hsla(0, 0%, 78.4%, 0.2);
+}
+.content_item_row.active_row {
+  background-color: #4caf50 !important;
 }
 .item_row_title {
   font-size: 14px !important;
   font-weight: 300;
-    color: #fff;
+  color: #fff;
+  padding-left: 30px;
+}
+.item_row_logo {
+  width: 25px;
+  height: 25px;
+}
+.icon_input {
+  background: url(../assets/menu/Input.png);
+  background-size: cover;
+}
+.icon_selectbox {
+  background: url(../assets/menu/SelectBox.png);
+  background-size: cover;
+}
+.icon_calendar {
+  background: url(../assets/menu/Calendar.png);
+  background-size: cover;
+}
+.icon_treelist {
+  background: url(../assets/menu/TreeList.png);
+  background-size: cover;
+}
+.icon_tablegrid {
+  background: url(../assets/menu/TableGrid.png);
+  background-size: cover;
 }
 </style>
