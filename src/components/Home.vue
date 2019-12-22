@@ -1,18 +1,17 @@
 <template>
   <div class="homepage">
-    <div class="header">
-      <div class="header_logo"></div>
-      <div class="header_content"></div>
-      <div class="header_search"></div>
-    </div>
+        <InputPage/>
+         <SelectPage/>
   </div>
 </template>
 
 <script>
-
+import InputPage from "./input/InputPage";
+import SelectPage from "./input/SelectPage";
 export default {
   name: "HomePage",
   components: {
+    InputPage,SelectPage
   },
   props: {
     msg: String
@@ -26,10 +25,8 @@ export default {
 </script>
 
 <style scoped>
-
 .homepage {
- flex: 1;
- background: blue;
-     overflow: hidden;
+  flex: 1;
+  background: blue;
 }
 </style>

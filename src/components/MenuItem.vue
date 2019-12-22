@@ -37,7 +37,9 @@ export default {
         { name: "SelectBox", icon: "icon_selectbox" },
         { name: "Calendar", icon: "icon_calendar" },
         { name: "TreeList", icon: "icon_treelist" },
-        { name: "TableGrid", icon: "icon_tablegrid" }
+        { name: "TableGrid", icon: "icon_tablegrid" },
+        { name: "弹框", icon: "icon_tablegrid" },
+        { name: "杂项", icon: "icon_tablegrid" }
       ]
     };
   },
