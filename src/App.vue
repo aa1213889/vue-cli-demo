@@ -3,21 +3,19 @@
     <v-content>
       <div class="content">
          <MenuItem />
-         <HomePage />
+         <router-view></router-view>
       </div>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HomePage from "./components/Home";
 import MenuItem from "./components/MenuItem";
 
 export default {
   name: "App",
 
   components: {
-    HomePage,
     MenuItem
   },
 
