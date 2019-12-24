@@ -23,9 +23,8 @@ export default {
 </script>
 
 <style scoped>
- .inputpage{
-   background: rgb(238, 238, 238);
-   width: 100%;
-   height: 100%;
- }
+.inputpage {
+  background: rgb(238, 238, 238);
+  flex: 1;
+}
 </style>

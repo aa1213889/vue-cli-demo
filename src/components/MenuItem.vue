@@ -15,7 +15,6 @@
           v-for="item in menuArr"
           :to="item.link"
           @click="menuClick(item.name)"
-          v-bind:class="{active_row:item.name === nowSelect}"
           :key="item.name"
         >
           <div class="item_row_logo" v-bind:class="item.icon"></div>

@@ -17,7 +17,7 @@ export default new Router({
     { path: '/input', name: 'InputPage', component: InputPage },
     { path: '/select', name: 'SelectPage', component: SelectPage },
   ],
-  mode:'history',  //去掉连接#号
-  linkActiveClass: 'active_row',
-  linkExactActiveClass: 'active_row',
+   mode:'history',  //去掉连接#号
+   linkActiveClass: 'active_row',
+  // linkExactActiveClass: 'active_row',
 })
