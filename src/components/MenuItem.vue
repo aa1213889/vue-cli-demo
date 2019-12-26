@@ -140,6 +140,7 @@ export default {
   font-weight: 300;
   color: #fff;
   padding-left: 30px;
+  user-select: none;
 }
 .item_row_logo {
   width: 25px;
