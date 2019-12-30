@@ -1,9 +1,121 @@
+.item_page {
+    min-width: 1000px;
+}
+
 .header {
     font-size: 18px;
     width: 100%;
+    color: #495057
 }
 
 .content {
     width: 100%;
-    padding-top: 30px;
+    padding-top: 50px;
+}
+
+.inputpage {
+    background: rgb(238, 238, 238);
+    flex: 1;
+    padding: 2%;
+}
+
+.content_row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex_box {
+    width: 24%;
+    height: 140px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14) !important;
+    border-radius: 3px;
+    background-color: #fff;
+    border-color: #fff;
+    color: rgba(0, 0, 0, 0.87);
+    display: flex;
+    flex-direction: column;
+}
+
+.flex_box_line {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-width: thin 0 0;
+}
+
+.flex_box_logo {
+    position: absolute;
+    flex: 0 1;
+    margin-top: -20px;
+    margin-left: 0;
+    margin-right: auto;
+    margin-bottom: 0 !important;
+    max-width: auto;
+    padding: 0 16px;
+}
+
+.box_logo_card {
+    width: 85px;
+    height: 85px;
+    padding: 15px !important;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box_green {
+    background: linear-gradient(60deg, #66bb6a, #43a047);
+    box-shadow: 0 12px 20px -10px rgba(76, 175, 80, 0.28), 0 4px 20px 0 rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(76, 175, 80, 0.2);
+}
+
+.box_orange {
+    background: linear-gradient(60deg, #ffa726, #fb8c00)!important;
+    box-shadow: 0 12px 20px -10px rgba(255, 152, 0, .28), 0 4px 20px 0 rgba(0, 0, 0, .12), 0 7px 8px -5px rgba(255, 152, 0, .2);
+}
+
+.flex_box_txt {
+    display: flex;
+    width: 100%;
+    height: 85px;
+    flex-direction: row-reverse;
+}
+
+.flex_box_hint {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    color: #999;
+    font-size: 12px;
+}
+
+.box_txt_div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 20px;
+    justify-content: center;
+}
+
+.txt_div_num {
+    font-size: 22px;
+}
+
+.txt_div_title {
+    color: #999;
+    font-size: 14px
+}
+
+.logo_card_pic {
+    width: 35px;
+    height: 35px;
+}
+
+.box_hint_pic {
+    width: 15px;
+    height: 15px;
 }

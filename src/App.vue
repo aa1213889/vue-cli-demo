@@ -1,9 +1,9 @@
 <template>
   <v-app>
     <v-content>
-      <div class="content">
-         <MenuItem />
-         <router-view></router-view>
+      <div class="content_app">
+        <MenuItem />
+        <router-view></router-view>
       </div>
     </v-content>
   </v-app>
@@ -25,7 +25,7 @@ export default {
 };
 </script>
 <style scoped>
-.content{
+.content_app {
   display: flex;
   width: 100%;
   height: 100%;
