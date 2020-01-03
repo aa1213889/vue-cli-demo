@@ -23,11 +23,12 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
 }
 
 .flex_box {
     width: 24%;
-    height: 140px;
+    height: 130px;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14) !important;
     border-radius: 3px;
     background-color: #fff;
@@ -47,12 +48,7 @@
 
 .flex_box_logo {
     position: absolute;
-    flex: 0 1;
     margin-top: -20px;
-    margin-left: 0;
-    margin-right: auto;
-    margin-bottom: 0 !important;
-    max-width: auto;
     padding: 0 16px;
 }
 
@@ -74,6 +70,16 @@
 .box_orange {
     background: linear-gradient(60deg, #ffa726, #fb8c00)!important;
     box-shadow: 0 12px 20px -10px rgba(255, 152, 0, .28), 0 4px 20px 0 rgba(0, 0, 0, .12), 0 7px 8px -5px rgba(255, 152, 0, .2);
+}
+
+.box_red {
+    background: linear-gradient(60deg, rgb(239, 83, 80), rgb(229, 57, 53))!important;
+    box-shadow: 0 12px 20px -10px rgba(244, 67, 54, .28), 0 4px 20px 0 rgba(0, 0, 0, .12), 0 7px 8px -5px rgba(244, 67, 54, .2)!important;
+}
+
+.box_blue {
+    background: linear-gradient(60deg, rgb(38, 198, 218), rgb(0, 172, 193))!important;
+    box-shadow: 0 12px 20px -10px rgba(0, 188, 212, .28), 0 4px 20px 0 rgba(0, 0, 0, .12), 0 7px 8px -5px rgba(0, 188, 212, .2)!important;
 }
 
 .flex_box_txt {
