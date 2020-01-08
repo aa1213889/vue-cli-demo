@@ -86,33 +86,47 @@
           </div>
           <div class="tablebox_body">
             <div class="tablebox_title">
-              <div>ID</div>
-              <div>Name</div>
-              <div>Salary</div>
-              <div>County</div>
-              <div>City</div>
+              <div class="tablebox_title_el title_el10">ID</div>
+              <div class="tablebox_title_el title_el30">Name</div>
+              <div class="tablebox_title_el title_el20">Salary</div>
+              <div class="tablebox_title_el title_el20">County</div>
+              <div class="tablebox_title_el title_el20 title_el_end">City</div>
             </div>
             <div class="tablebox_content">
               <div class="tablebox_row">
-                <div>1</div>
-                <div>Dakota Rice</div>
-                <div>$35,738</div>
-                <div>Canada</div>
-                <div>Vancouver</div>
+                <div class="tablebox_title_el title_el10">1</div>
+                <div class="tablebox_title_el title_el30">Dakota Rice</div>
+                <div class="tablebox_title_el title_el20">$35,738</div>
+                <div class="tablebox_title_el title_el20">Canada</div>
+                <div class="tablebox_title_el title_el20 title_el_end">Vancouver</div>
               </div>
               <div class="tablebox_row">
-                <div>1</div>
-                <div>Dakota Rice</div>
-                <div>$35,738</div>
-                <div>Canada</div>
-                <div>Vancouver</div>
+                <div class="tablebox_title_el title_el10">2</div>
+                <div class="tablebox_title_el title_el30">Dakota Rice</div>
+                <div class="tablebox_title_el title_el20">$35,738</div>
+                <div class="tablebox_title_el title_el20">Canada</div>
+                <div class="tablebox_title_el title_el20 title_el_end">Vancouver</div>
               </div>
               <div class="tablebox_row">
-                <div>1</div>
-                <div>Dakota Rice</div>
-                <div>$35,738</div>
-                <div>Canada</div>
-                <div>Vancouver</div>
+                <div class="tablebox_title_el title_el10">3</div>
+                <div class="tablebox_title_el title_el30">Dakota Rice</div>
+                <div class="tablebox_title_el title_el20">$35,738</div>
+                <div class="tablebox_title_el title_el20">Canada</div>
+                <div class="tablebox_title_el title_el20 title_el_end">Vancouver</div>
+              </div>
+              <div class="tablebox_row">
+                <div class="tablebox_title_el title_el10">4</div>
+                <div class="tablebox_title_el title_el30">Dakota Rice</div>
+                <div class="tablebox_title_el title_el20">$35,738</div>
+                <div class="tablebox_title_el title_el20">Canada</div>
+                <div class="tablebox_title_el title_el20 title_el_end">Vancouver</div>
+              </div>
+              <div class="tablebox_row">
+                <div class="tablebox_title_el title_el10">5</div>
+                <div class="tablebox_title_el title_el30">Dakota Rice</div>
+                <div class="tablebox_title_el title_el20">$35,738</div>
+                <div class="tablebox_title_el title_el20">Canada</div>
+                <div class="tablebox_title_el title_el20 title_el_end">Vancouver</div>
               </div>
             </div>
           </div>

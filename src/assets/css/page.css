@@ -33,7 +33,6 @@
 
 .flex_box {
     width: 24%;
-    height: 130px;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14) !important;
     border-radius: 3px;
     background-color: #fff;
@@ -141,7 +140,6 @@
 
 .table_box {
     width: 49%;
-    height: 500px;
 }
 
 .task_box {
@@ -167,6 +165,8 @@
     width: 100%;
     flex-grow: 1;
     padding-top: 75px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .mtop90 {
@@ -179,7 +179,6 @@
     align-items: center;
     color: #ff9800!important;
     font-weight: 300!important;
-    padding: 0 20px;
     justify-content: space-between;
 }
 
@@ -187,9 +186,35 @@
     display: flex;
     height: 50px;
     align-items: center;
-    color: #ff9800!important;
-    font-weight: 300!important;
-    padding: 0 20px;
+    color: rgba(0, 0, 0, .87);
     justify-content: space-between;
-    border-top: 1px solid gray;
+    border-top: 1px solid rgba(0, 0, 0, .06)!important;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.tablebox_row:hover {
+    background: #f5f5f5!important;
+    transition: background 0.9s cubic-bezier(.25, .8, .5, 1);
+}
+
+.tablebox_title_el {
+    padding-left: 5px;
+}
+
+.title_el10 {
+    width: 10%;
+}
+
+.title_el20 {
+    width: 20%;
+}
+
+.title_el30 {
+    width: 30%;
+}
+
+.title_el_end {
+    display: flex;
+    flex-direction: row-reverse;
 }
