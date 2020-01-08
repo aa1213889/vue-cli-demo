@@ -55,6 +55,7 @@
     position: absolute;
     margin-top: -20px;
     padding: 0 16px;
+    width: 100%;
 }
 
 .box_logo_card {
@@ -65,6 +66,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.table_box_card {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .box_green {
@@ -130,4 +137,59 @@
 .box_hint_pic {
     width: 15px;
     height: 15px;
+}
+
+.table_box {
+    width: 49%;
+    height: 500px;
+}
+
+.task_box {
+    width: 49%;
+    height: 400px;
+}
+
+.table_box_title {
+    line-height: 1.5em!important;
+    letter-spacing: 0!important;
+    font-size: 1.125rem!important;
+    margin-bottom: 5px!important;
+    color: #fff;
+    font-weight: 300!important;
+}
+
+.table_box_date {
+    color: hsla(0, 0%, 100%, .62);
+    font-size: 14px;
+}
+
+.tablebox_body {
+    width: 100%;
+    flex-grow: 1;
+    padding-top: 75px;
+}
+
+.mtop90 {
+    margin-top: 90px;
+}
+
+.tablebox_title {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    color: #ff9800!important;
+    font-weight: 300!important;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+.tablebox_row {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    color: #ff9800!important;
+    font-weight: 300!important;
+    padding: 0 20px;
+    justify-content: space-between;
+    border-top: 1px solid gray;
 }

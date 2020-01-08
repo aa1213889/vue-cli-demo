@@ -76,6 +76,53 @@
           </div>
         </div>
       </div>
+      <div class="content_row mtop90">
+        <div class="table_box flex_box">
+          <div class="flex_box_logo">
+            <div class="box_logo_card box_orange table_box_card">
+              <div class="table_box_title">Employee Stats</div>
+              <div class="table_box_date">New employees on 15th September, 2018</div>
+            </div>
+          </div>
+          <div class="tablebox_body">
+            <div class="tablebox_title">
+              <div>ID</div>
+              <div>Name</div>
+              <div>Salary</div>
+              <div>County</div>
+              <div>City</div>
+            </div>
+            <div class="tablebox_content">
+              <div class="tablebox_row">
+                <div>1</div>
+                <div>Dakota Rice</div>
+                <div>$35,738</div>
+                <div>Canada</div>
+                <div>Vancouver</div>
+              </div>
+              <div class="tablebox_row">
+                <div>1</div>
+                <div>Dakota Rice</div>
+                <div>$35,738</div>
+                <div>Canada</div>
+                <div>Vancouver</div>
+              </div>
+              <div class="tablebox_row">
+                <div>1</div>
+                <div>Dakota Rice</div>
+                <div>$35,738</div>
+                <div>Canada</div>
+                <div>Vancouver</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="task_box flex_box">
+          <div class="flex_box_logo">
+            <div class="box_logo_card box_green"></div>
+          </div>
+        </div>
+      </div>
       <div class="content_row" style="justify-content: flex-start;">
         <div class="t1">1</div>
         <div class="t1 t2">2</div>
@@ -87,51 +134,6 @@
         <div class="t1">8</div>
       </div>
 
-      <div class="content_row">
-        <pre>
-          methods: {
-             clickLink: function() {
-               this.$router.push("./sb");
-             }
-          }
-         </pre>
-      </div>
-      <div class="content_row">
-        <pre>
-          methods: {
-             clickLink: function() {
-               this.$router.push("./sb");
-             }
-          }
-         </pre>
-      </div>
-      <div class="content_row">
-        <pre>
-          methods: {
-             clickLink: function() {
-               this.$router.push("./sb");
-             }
-          }
-         </pre>
-      </div>
-      <div class="content_row">
-        <pre>
-          methods: {
-             clickLink: function() {
-               this.$router.push("./sb");
-             }
-          }
-         </pre>
-      </div>
-      <div class="content_row">
-        <pre>
-          methods: {
-             clickLink: function() {
-               this.$router.push("./sb");
-             }
-          }
-         </pre>
-      </div>
       <div class="content_row">
         <pre>
           methods: {
