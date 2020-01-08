@@ -1,5 +1,11 @@
 .item_page {
     min-width: 1000px;
+    height: 100%;
+    width: calc(100% - 260px);
+    position: absolute;
+    float: right;
+    right: 0px;
+    overflow-y: auto;
 }
 
 .header {
@@ -15,7 +21,6 @@
 
 .inputpage {
     background: rgb(238, 238, 238);
-    flex: 1;
     padding: 20px;
 }
 

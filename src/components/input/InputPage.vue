@@ -76,6 +76,71 @@
           </div>
         </div>
       </div>
+      <div class="content_row" style="justify-content: flex-start;">
+        <div class="t1">1</div>
+        <div class="t1 t2">2</div>
+        <div class="t1">3</div>
+        <div class="t1">4</div>
+        <div class="t1">5</div>
+        <div class="t1">6</div>
+        <div class="t1">7</div>
+        <div class="t1">8</div>
+      </div>
+
+      <div class="content_row">
+        <pre>
+          methods: {
+             clickLink: function() {
+               this.$router.push("./sb");
+             }
+          }
+         </pre>
+      </div>
+      <div class="content_row">
+        <pre>
+          methods: {
+             clickLink: function() {
+               this.$router.push("./sb");
+             }
+          }
+         </pre>
+      </div>
+      <div class="content_row">
+        <pre>
+          methods: {
+             clickLink: function() {
+               this.$router.push("./sb");
+             }
+          }
+         </pre>
+      </div>
+      <div class="content_row">
+        <pre>
+          methods: {
+             clickLink: function() {
+               this.$router.push("./sb");
+             }
+          }
+         </pre>
+      </div>
+      <div class="content_row">
+        <pre>
+          methods: {
+             clickLink: function() {
+               this.$router.push("./sb");
+             }
+          }
+         </pre>
+      </div>
+      <div class="content_row">
+        <pre>
+          methods: {
+             clickLink: function() {
+               this.$router.push("./sb");
+             }
+          }
+         </pre>
+      </div>
     </div>
   </div>
 </template>
@@ -139,5 +204,37 @@ export default {
 .pd_10 {
   padding-left: 2px;
   text-indent: 1em;
+}
+.t1 {
+  width: 25%;
+  height: 50px;
+  background-color: brown;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid rgb(238, 238, 238);
+}
+.t2 {
+  background-color: blueviolet;
+}
+pre {
+  color: rgb(230, 236, 241);
+  display: block;
+  hyphens: none;
+  tab-size: 2;
+  direction: ltr;
+  font-size: 14px;
+  text-align: left;
+  word-break: normal;
+  font-family: "Source Code Pro", Consolas, Menlo, Monaco, Courier, monospace;
+  line-height: 1.4;
+  white-space: pre;
+  word-spacing: normal;
+  margin: 32px 0px;
+  padding: 24px 24px 24px 8px;
+  overflow: auto;
+  background: rgb(24, 48, 85);
+  border-radius: 3px;
 }
 </style>

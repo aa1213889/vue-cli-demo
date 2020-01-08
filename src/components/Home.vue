@@ -1,7 +1,7 @@
 <template>
   <div class="homepage">
-        <InputPage/>
-         <SelectPage/>
+    <InputPage />
+    <SelectPage />
   </div>
 </template>
 
@@ -11,7 +11,8 @@ import SelectPage from "./input/SelectPage";
 export default {
   name: "HomePage",
   components: {
-    InputPage,SelectPage
+    InputPage,
+    SelectPage
   },
   props: {
     msg: String

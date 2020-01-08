@@ -14,7 +14,6 @@
           class="content_item_row"
           v-for="item in menuArr"
           :to="item.link"
-          @click="menuClick(item.name)"
           :key="item.name"
         >
           <div class="item_row_logo" v-bind:class="item.icon"></div>
@@ -34,11 +33,11 @@ export default {
     return {
       nowSelect: "Input",
       menuArr: [
-        { name: "Input", icon: "icon_input",link:'input' },
-        { name: "SelectBox", icon: "icon_selectbox",link:'select' },
-        { name: "Calendar", icon: "icon_calendar",link:'calendar' },
-        { name: "TreeList", icon: "icon_treelist",link:'treelist' },
-        { name: "TableGrid", icon: "icon_tablegrid",link:'tablegrid' },
+        { name: "Input", icon: "icon_input", link: "input" },
+        { name: "SelectBox", icon: "icon_selectbox", link: "select" },
+        { name: "Calendar", icon: "icon_calendar", link: "calendar" },
+        { name: "TreeList", icon: "icon_treelist", link: "treelist" },
+        { name: "TableGrid", icon: "icon_tablegrid", link: "tablegrid" }
         // { name: "弹框", icon: "icon_tablegrid" },
         // { name: "杂项", icon: "icon_tablegrid" }
       ]
@@ -47,16 +46,7 @@ export default {
   props: {
     msg: String
   },
-  methods: {
-    clickLink: function() {
-      this.$router.push("./input");
-    },
-    menuClick: function(name) {
-      window.debugger;
-      this.nowSelect = name; //点击当前元素添加class 去掉兄弟的class
-      // this.$router.push("./input");
-    }
-  }
+  methods: {}
 };
 </script>
 
@@ -67,6 +57,7 @@ export default {
   background: url(../assets/menu.png);
   background-size: cover;
   width: 260px;
+  position: fixed;
 }
 .menu_content {
   width: 100%;

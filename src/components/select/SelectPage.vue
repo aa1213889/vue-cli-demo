@@ -1,5 +1,5 @@
 <template>
-  <div class="selectpage">
+  <div class="selectpage item_page">
     <div class="header">
       <div class="header_logo"></div>
       <div class="header_content"></div>
@@ -25,6 +25,5 @@ export default {
 <style scoped>
  .selectpage{
    background: rgb(66, 40, 40);
-  flex: 1
  }
 </style>
