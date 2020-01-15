@@ -36,7 +36,7 @@
           <hr class="flex_box_line" />
           <div class="flex_box_hint">
             <div class="box_hint_pic logo_misscall"></div>
-            <div class="pd_10">missed call notification</div>
+            <div class="pd_10">Missed call notification</div>
           </div>
         </div>
         <div class="flex_box">
@@ -54,7 +54,7 @@
           <hr class="flex_box_line" />
           <div class="flex_box_hint">
             <div class="box_hint_pic logo_rise"></div>
-            <div class="pd_10">The stock rose 1.6 percent to colse at 7.57 dollar today.</div>
+            <div class="pd_10">The stock rose 1.6 percent.</div>
           </div>
         </div>
         <div class="flex_box">
@@ -102,38 +102,62 @@
               </div>
               <div class="tablebox_row">
                 <div class="tablebox_title_el title_el10">2</div>
-                <div class="tablebox_title_el title_el30">Dakota Rice</div>
-                <div class="tablebox_title_el title_el20">$35,738</div>
-                <div class="tablebox_title_el title_el20">Canada</div>
-                <div class="tablebox_title_el title_el20 title_el_end">Vancouver</div>
+                <div class="tablebox_title_el title_el30">Minerva Hooper</div>
+                <div class="tablebox_title_el title_el20">$23,738</div>
+                <div class="tablebox_title_el title_el20">Curaçao</div>
+                <div class="tablebox_title_el title_el20 title_el_end">Sinaai-Waas</div>
               </div>
               <div class="tablebox_row">
                 <div class="tablebox_title_el title_el10">3</div>
-                <div class="tablebox_title_el title_el30">Dakota Rice</div>
-                <div class="tablebox_title_el title_el20">$35,738</div>
-                <div class="tablebox_title_el title_el20">Canada</div>
-                <div class="tablebox_title_el title_el20 title_el_end">Vancouver</div>
+                <div class="tablebox_title_el title_el30">Sage Rodriguez</div>
+                <div class="tablebox_title_el title_el20">$56,142</div>
+                <div class="tablebox_title_el title_el20">Netherlands</div>
+                <div class="tablebox_title_el title_el20 title_el_end">Overland Park</div>
               </div>
               <div class="tablebox_row">
                 <div class="tablebox_title_el title_el10">4</div>
-                <div class="tablebox_title_el title_el30">Dakota Rice</div>
-                <div class="tablebox_title_el title_el20">$35,738</div>
-                <div class="tablebox_title_el title_el20">Canada</div>
-                <div class="tablebox_title_el title_el20 title_el_end">Vancouver</div>
+                <div class="tablebox_title_el title_el30">Philip Chanley</div>
+                <div class="tablebox_title_el title_el20">$38,735</div>
+                <div class="tablebox_title_el title_el20">Korea, South</div>
+                <div class="tablebox_title_el title_el20 title_el_end">Gloucester</div>
               </div>
               <div class="tablebox_row">
                 <div class="tablebox_title_el title_el10">5</div>
-                <div class="tablebox_title_el title_el30">Dakota Rice</div>
-                <div class="tablebox_title_el title_el20">$35,738</div>
-                <div class="tablebox_title_el title_el20">Canada</div>
-                <div class="tablebox_title_el title_el20 title_el_end">Vancouver</div>
+                <div class="tablebox_title_el title_el30">Geralt</div>
+                <div class="tablebox_title_el title_el20">$63,542</div>
+                <div class="tablebox_title_el title_el20">Nilfgaardian</div>
+                <div class="tablebox_title_el title_el20 title_el_end">Kaer Morhen</div>
               </div>
             </div>
           </div>
         </div>
         <div class="task_box flex_box">
           <div class="flex_box_logo">
-            <div class="box_logo_card box_green"></div>
+            <div class="box_logo_card box_green table_box_card">
+              <div class="flex_box_title flex_weight300">
+                <div>Tasks:</div>
+                <div class="flex_box_tabs">
+                  <div class="flex_tabs_tag">
+                    <div class="flex_tag_center">
+                      <div class="flex_tags_icon logo_bugs"></div>
+                      <div>Bugs</div>
+                    </div>
+                  </div>
+                   <div class="flex_tabs_tag">
+                    <div class="flex_tag_center">
+                      <div class="flex_tags_icon logo_web"></div>
+                      <div>Website</div>
+                    </div>
+                  </div>
+                   <div class="flex_tabs_tag">
+                    <div class="flex_tag_center">
+                      <div class="flex_tags_icon logo_server"></div>
+                      <div>Server</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -214,6 +238,21 @@ export default {
 
 .logo_stock {
   background: url(../../assets/demo/stock.png);
+  background-size: cover;
+}
+
+.logo_bugs {
+  background: url(../../assets/demo/bug.png);
+  background-size: cover;
+}
+
+.logo_web {
+  background: url(../../assets/demo/web.png);
+  background-size: cover;
+}
+
+.logo_server {
+  background: url(../../assets/demo/server.png);
   background-size: cover;
 }
 
