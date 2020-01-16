@@ -138,20 +138,21 @@
                 <div>Tasks:</div>
                 <div class="flex_box_tabs">
                   <div class="flex_tabs_tag">
-                    <div class="flex_tag_center">
+                    <div class="flex_tag_center width_55">
                       <div class="flex_tags_icon logo_bugs"></div>
                       <div>Bugs</div>
                     </div>
+                    <div class="tag_line"></div>
                   </div>
-                   <div class="flex_tabs_tag">
-                    <div class="flex_tag_center">
-                      <div class="flex_tags_icon logo_web"></div>
+                  <div class="flex_tabs_tag">
+                    <div class="flex_tag_center width_78">
+                      <div class="logo_web"></div>
                       <div>Website</div>
                     </div>
                   </div>
-                   <div class="flex_tabs_tag">
-                    <div class="flex_tag_center">
-                      <div class="flex_tags_icon logo_server"></div>
+                  <div class="flex_tabs_tag">
+                    <div class="flex_tag_center width_65">
+                      <div class="logo_server"></div>
                       <div>Server</div>
                     </div>
                   </div>
@@ -247,11 +248,15 @@ export default {
 }
 
 .logo_web {
+  width: 25px;
+  height: 25px;
   background: url(../../assets/demo/web.png);
   background-size: cover;
 }
 
 .logo_server {
+  width: 21px;
+  height: 15px;
   background: url(../../assets/demo/server.png);
   background-size: cover;
 }

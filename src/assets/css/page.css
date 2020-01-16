@@ -228,7 +228,7 @@
 }
 
 .flex_box_tabs {
-    width: 100%;
+    width: 350px;
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -242,11 +242,20 @@
 }
 
 .flex_tabs_tag {
-    width: 25%;
+    width: 110px;
     height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin-left: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.flex_tabs_tag:active {
+    background-color: rgb(255, 255, 255,0.7);
+    border-radius: 7px;
 }
 
 .flex_tags_icon {
@@ -256,8 +265,18 @@
 
 .flex_tag_center {
     display: flex;
-    /* height: 100%; */
     justify-content: space-between;
     align-items: center;
+}
+
+.width_55 {
+    width: 55%;
+}
+
+.width_65 {
     width: 65%;
+}
+
+.width_78 {
+    width: 78%;
 }
