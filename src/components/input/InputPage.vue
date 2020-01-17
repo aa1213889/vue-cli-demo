@@ -137,25 +137,23 @@
               <div class="flex_box_title flex_weight300">
                 <div>Tasks:</div>
                 <div class="flex_box_tabs">
-                  <div class="flex_tabs_tag">
-                    <div class="flex_tag_center width_55">
-                      <div class="flex_tags_icon logo_bugs"></div>
-                      <div>Bugs</div>
-                    </div>
-                    <div class="tag_line"></div>
-                  </div>
-                  <div class="flex_tabs_tag">
-                    <div class="flex_tag_center width_78">
-                      <div class="logo_web"></div>
-                      <div>Website</div>
-                    </div>
-                  </div>
-                  <div class="flex_tabs_tag">
-                    <div class="flex_tag_center width_65">
-                      <div class="logo_server"></div>
-                      <div>Server</div>
+                  <div
+                    class="flex_tabs_tag animated"
+                    @click="tabTagClick(index)"
+                    v-for="(item,index) in tabContent"
+                    :key="item.name"
+                  >
+                    <div
+                      class="flex_tag_center"
+                      :class="[{bounceIn:index == tabIndex},item.classWidth]"
+                    >
+                      <div class="flex_tags_icon" :class="item.classIcon"></div>
+                      <div>{{item.name}}</div>
                     </div>
                   </div>
+                  <div class="flex_tabs_line" style="width: 95%;
+    height: 1px;
+    background: rgb(255, 255, 255);"></div>
                 </div>
               </div>
             </div>
@@ -192,9 +190,17 @@ export default {
   props: {
     msg: String
   },
+  data: () => ({
+    tabContent: [
+      { name: "Bugs", classWidth: "width_55", classIcon: "logo_bugs" },
+      { name: "Website", classWidth: "width_75", classIcon: "logo_web" },
+      { name: "Server", classWidth: "width_65", classIcon: "logo_server" }
+    ],
+    tabIndex: 0
+  }),
   methods: {
-    clickLink: function() {
-      this.$router.push("./sb");
+    tabTagClick(index) {
+      this.tabIndex = index;
     }
   }
 };

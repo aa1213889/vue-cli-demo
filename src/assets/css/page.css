@@ -235,6 +235,7 @@
     align-items: center;
     font-weight: 450;
     font-size: 14px;
+    flex-wrap: wrap;
 }
 
 .flex_weight300 {
@@ -253,10 +254,10 @@
     user-select: none;
 }
 
-.flex_tabs_tag:active {
+/* .flex_tabs_tag:active {
     background-color: rgb(255, 255, 255,0.7);
     border-radius: 7px;
-}
+} */
 
 .flex_tags_icon {
     width: 18px;
@@ -277,6 +278,10 @@
     width: 65%;
 }
 
-.width_78 {
-    width: 78%;
+.width_75 {
+    width: 75%;
+}
+
+.tag_line{
+    border-bottom: 0.8px solid rgb(255,255,255,0.6);
 }
