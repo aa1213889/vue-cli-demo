@@ -151,13 +151,18 @@
                       <div>{{item.name}}</div>
                     </div>
                   </div>
-                  <div class="flex_tabs_line" style="width: 95%;
-    height: 1px;
-    background: rgb(255, 255, 255);"></div>
+                  <div class="flex_tabs_line">
+                    <div class="tabs_line_horizon"></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="task_box_content">
+              <div class="task_box_page">111111111111</div>
+              <div class="task_box_page">222222222</div>
+              <div class="task_box_page">3333333</div>
+            </div>
         </div>
       </div>
       <div class="content_row" style="justify-content: flex-start;">
@@ -200,6 +205,8 @@ export default {
   }),
   methods: {
     tabTagClick(index) {
+      let lineDom = document.querySelector(".tabs_line_horizon");
+      lineDom.style.transform = `translate(${100 * index}%,0px)`;
       this.tabIndex = index;
     }
   }
@@ -271,6 +278,7 @@ export default {
   padding-left: 2px;
   text-indent: 1em;
 }
+
 .t1 {
   width: 25%;
   height: 50px;
