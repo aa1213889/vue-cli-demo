@@ -137,16 +137,9 @@
               <div class="flex_box_title flex_weight300">
                 <div>Tasks:</div>
                 <div class="flex_box_tabs">
-                  <div
-                    class="flex_tabs_tag animated"
-                    @click="tabTagClick(index)"
-                    v-for="(item,index) in tabContent"
-                    :key="item.name"
-                  >
-                    <div
-                      class="flex_tag_center"
-                      :class="[{bounceIn:index == tabIndex},item.classWidth]"
-                    >
+                  <div class="flex_tabs_tag animated" @click="tabTagClick(index)" v-for="(item,index) in tabContent"
+                    :key="item.name">
+                    <div class="flex_tag_center" :class="[{bounceIn:index == tabIndex},item.classWidth]">
                       <div class="flex_tags_icon" :class="item.classIcon"></div>
                       <div>{{item.name}}</div>
                     </div>
@@ -159,10 +152,11 @@
             </div>
           </div>
           <div class="task_box_content">
-              <div class="task_box_page">111111111111</div>
-              <div class="task_box_page">222222222</div>
-              <div class="task_box_page">3333333</div>
+            <div class="task_box_page animated" v-for="item in pageContent" :key="item.id" :data-page="item.id"
+              :class="[{task_box_active:item.id === tabIndex},{fadeInRightBig:item.id < pagIndex},{fadeInLeftBig:item.id > pagIndex}]">
+              <div v-for="row in item.arr" :key="row.text">{{row.text}}</div>
             </div>
+          </div>
         </div>
       </div>
       <div class="content_row" style="justify-content: flex-start;">
@@ -201,12 +195,46 @@ export default {
       { name: "Website", classWidth: "width_75", classIcon: "logo_web" },
       { name: "Server", classWidth: "width_65", classIcon: "logo_server" }
     ],
-    tabIndex: 0
+    tabIndex: 0,
+    pagIndex: 0, //记录点击前的位置
+    pageContent: [
+      {
+        id: 0,
+        arr: [
+          { text: `质感设计于2014年6月25日的Google I/O大会上宣布。 ` },
+          {
+            text: `材质设计将逐步扩展到Google的网络和移动产品阵列，提供一致的跨平台和应用程序体验。`
+          },
+          {
+            text: `Google还为第三方开发人员发布了API，开发人员可将质感设计应用到他们的应用程序中。`
+          }
+        ]
+      },
+      {
+        id: 1,
+        arr: [
+          {
+            text: `Material Design is a design language that Google developed in 2014. `
+          },
+          { text: `Expanding on the "card" motifs that debuted in Google Now` },
+          { text: `Material Design uses more grid-based layouts` }
+        ]
+      },
+      {
+        id: 2,
+        arr: [
+          { text: `22222222222222222222222222222222222222222222222222 ` },
+          { text: `111111111` },
+          { text: `22222222` }
+        ]
+      }
+    ]
   }),
   methods: {
     tabTagClick(index) {
       let lineDom = document.querySelector(".tabs_line_horizon");
-      lineDom.style.transform = `translate(${100 * index}%,0px)`;
+      lineDom.style.transform = `translateX(${100 * index}%)`;
+      this.pagIndex = this.tabIndex;
       this.tabIndex = index;
     }
   }
