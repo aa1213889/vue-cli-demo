@@ -1,29 +1,32 @@
 <template>
   <div class="selectpage item_page">
-    <div class="header">
-      <div class="header_logo"></div>
-      <div class="header_content"></div>
-      <div class="header_search"></div>
+    <div class="header">SelectPage</div>
+    <div class="content">
+       <md-select placeholder="请选择"></md-select> 
     </div>
   </div>
 </template>
 
 <script>
+import MdSelect from "./MdSelect.vue";
+
 export default {
   name: "SelectPage",
   props: {
     msg: String
   },
+  components: {
+   MdSelect
+  },
   methods: {
-    clickLink: function() {
-      this.$router.push("./sb");
-    }
+ 
   }
 };
 </script>
 
 <style scoped>
- .selectpage{
-   background: rgb(66, 40, 40);
- }
+@import "../../assets/css/page.css";
+.selectpage {
+  background: rgb(238, 238, 238);
+}
 </style>

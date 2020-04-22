@@ -34,7 +34,7 @@ export default {
       nowSelect: "Input",
       menuArr: [
         { name: "Input", icon: "icon_input", link: "input" },
-        { name: "SelectBox", icon: "icon_selectbox", link: "select" },
+        { name: "Select", icon: "icon_selectbox", link: "select" },
         { name: "Calendar", icon: "icon_calendar", link: "calendar" },
         { name: "TreeList", icon: "icon_treelist", link: "treelist" },
         { name: "TableGrid", icon: "icon_tablegrid", link: "tablegrid" }

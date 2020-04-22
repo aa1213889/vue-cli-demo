@@ -7,7 +7,7 @@ import Router from 'vue-router' // 引入vue-router
 import HelloWorld from './components/HelloWorld';
 import InputPage from './components/input/InputPage';
 import SelectPage from './components/select/SelectPage';
-
+import CalendarPage from './components/calendar/CalendarPage';
 
 Vue.use(Router) //使用vue-router
 
@@ -16,6 +16,7 @@ export default new Router({
     { path: '/sb', name: 'HelloWorld', component: HelloWorld },
     { path: '/input', name: 'InputPage', component: InputPage },
     { path: '/select', name: 'SelectPage', component: SelectPage },
+    { path: '/calendar', name: 'CalendarPage', component: CalendarPage},
   ],
    mode:'history',  //去掉连接#号
    linkActiveClass: 'active_row',

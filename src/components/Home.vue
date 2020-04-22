@@ -7,7 +7,7 @@
 
 <script>
 import InputPage from "./input/InputPage";
-import SelectPage from "./input/SelectPage";
+import SelectPage from "./select/SelectPage";
 export default {
   name: "HomePage",
   components: {
