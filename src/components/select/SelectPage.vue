@@ -1,8 +1,16 @@
 <template>
   <div class="selectpage item_page">
-    <div class="header">SelectPage</div>
+    <div class="header">Select 选择器</div>
     <div class="content">
-       <md-select placeholder="请选择"></md-select> 
+      <md-select>
+        <!-- <md-option
+          v-for="item in options"
+          :key="item.value"
+          :label="item.label"
+          :value="item.value"
+        ></md-option> -->
+      </md-select>
+      <span>233</span>
     </div>
   </div>
 </template>
@@ -16,11 +24,9 @@ export default {
     msg: String
   },
   components: {
-   MdSelect
+    MdSelect
   },
-  methods: {
- 
-  }
+  methods: {}
 };
 </script>
 
