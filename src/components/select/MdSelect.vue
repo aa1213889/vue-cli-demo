@@ -34,38 +34,13 @@
 export default {
   name: "md-select",
   props: {
-    msg: String
+    options: {
+    }
   },
   data() {
     return {
       listShow: false,
       inputHover: false,
-      options: [
-        {
-          id: "0001",
-          value: "Android"
-        },
-        {
-          id: "0002",
-          value: "IOS"
-        },
-        {
-          id: "0003",
-          value: "Liunx"
-        },
-        {
-          id: "0004",
-          value: "Windows"
-        },
-        {
-          id: "0005",
-          value: "UNIX"
-        },
-        {
-          id: "0006",
-          value: "Mac OS"
-        }
-      ],
       initValue: "Liunx"
     };
   },
@@ -82,7 +57,6 @@ export default {
     itemClick(arg) {
       this.initValue = arg; //4.选择值后input框赋值
       this.listToggle();
-      // document.querySelector(".md-select-input").focus();
     },
     clearShow() {
       if (this.initValue === "") return;
