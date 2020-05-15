@@ -6,47 +6,51 @@
       @mouseover="clearShow()"
       @mouseout="clearHide()"
     >
-      <input class="md-select-input" type="text" v-model="initValue" placeholder="请选择" />
+      <input class="md-select-input" type="text" v-model="initValue" placeholder="请选择" disabled />
       <div
         :class="[inputHover?'md-select-clear':'md-select-arrows',listShow?'arrows90':'arrows0']"
         @click.stop="clearClick()"
       ></div>
     </div>
-    <div
-      class="md-select-list animated"
-      v-show="listShow"
-      :class="listShow?'fadeInDown':'fadeOutUp'"
-    >
-      <div class="md-select-angle"></div>
-      <div class="md-select-itembox">
-        <div
-          class="md-select-item"
-          v-for="item in options"
-          :key="item.id"
-          :class="{'checked':(item.value === initValue)}"
-          @click="itemClick(item.value)"
-        >{{item.value}}</div>
+    <transition>
+      <div
+        class="md-select-list animated"
+        v-show="listShow"
+        :class="listShow?'fade-indown-list':'fade-outup-list'"
+      >
+        <div class="md-select-angle"></div>
+        <div class="md-select-itembox">
+          <div
+            class="md-select-item"
+            v-for="item in options"
+            :key="item.id"
+            :class="{'checked':(item.value === initValue)}"
+            @click="itemClick(item.value)"
+          >{{item.value}}</div>
+        </div>
       </div>
-    </div>
+    </transition>
   </div>
 </template>
 <script>
 export default {
   name: "md-select",
-  props: {
-    options: {
-    }
-  },
+  // props: {
+  //   options: {},
+  //   father:'2',
+  // },
+  props: ["options"],
+  watch: {},
   data() {
     return {
       listShow: false,
       inputHover: false,
-      initValue: "Liunx"
+      initValue: ""
     };
   },
   mounted() {
     document.addEventListener("click", e => {
-      if (!this.$el.contains(e.target)) this.listShow = false;   //点击组件外的区域隐藏下拉框 
+      if (!this.$el.contains(e.target)) this.listShow = false; //点击组件外的区域隐藏下拉框
     });
   },
 
@@ -55,6 +59,7 @@ export default {
       this.listShow = !this.listShow; //1.置换显示状态
     },
     itemClick(arg) {
+      this.$emit("itemClick", arg);
       this.initValue = arg; //4.选择值后input框赋值
       this.listToggle();
     },
@@ -74,9 +79,6 @@ export default {
         this.listToggle();
       }
     }
-    //1.关闭动画
-    //2.组件传递值
-    //3.boder闪动
   }
 };
 </script>
@@ -89,7 +91,6 @@ export default {
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14) !important;
-
   .md-select-box {
     width: 100%;
     height: 100%;
@@ -165,6 +166,39 @@ export default {
   }
 }
 .md-select:hover {
-  outline: 2px solid #4f77d2;
+  // border: 2px solid #4f77d2;
+}
+.animated {
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+
+.fade-indown-list {
+  animation-name: fadeInDownList;
+}
+
+@keyframes fadeInDownList {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fade-outup-list {
+  animation-name: fadeOutUpList;
+}
+
+@keyframes fadeOutUpList {
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+  0% {
+    opacity: 1;
+  }
 }
 </style>

@@ -8,4 +8,3 @@
       Select Events
       change	选中值发生变化前触发
       focus	当 input 获得焦点时触发
-
