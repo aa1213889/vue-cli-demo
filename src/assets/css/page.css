@@ -344,8 +344,11 @@
     font-size: 14px;
     color: #5e6d82;
     line-height: 1.5em;
-    padding-left: 40px;
     padding-top: 10px;
+}
+
+.content-header {
+    width: 900px;
 }
 
 .content-example-header {
@@ -422,4 +425,8 @@
 
 .pt-100 {
     padding-top: 100px;
+}
+
+.pt-40{
+    padding-top: 40px;
 }

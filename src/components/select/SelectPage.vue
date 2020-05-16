@@ -1,9 +1,11 @@
 <template>
   <div class="selectpage item_page">
-    <div class="header">Select 选择器</div>
-    <div class="content-title-hint">当选项过多时，使用下拉菜单展示并选择内容。</div>
     <div class="content">
-      <div class="content_row flex-col">
+      <div class="content-header">
+        <div class="header">Select 选择器</div>
+        <div class="content-title-hint">当选项过多时，使用下拉菜单展示并选择内容。</div>
+      </div>
+      <div class="content_row flex-col pt-40">
         <div class="flex_box_logo">
           <div class="box_logo_card box_orange table_box_card">
             <div class="table_box_title">基础用法</div>
@@ -252,11 +254,11 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 0px;
 }
 
 .header {
   display: flex;
-  padding-left: 40px;
   font-weight: 400;
   color: #1f2f3d;
   font-size: 28px;
