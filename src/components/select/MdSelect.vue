@@ -1,12 +1,19 @@
 <template>
-  <div class="md-select">
+  <div class="md-select" :class="[disabled?'input-disabled':'']">
     <div
       class="md-select-box"
       @click="listToggle()"
       @mouseover="clearShow()"
       @mouseout="clearHide()"
     >
-      <input class="md-select-input" type="text" v-model="initValue" placeholder="请选择" disabled />
+      <input
+        class="md-select-input"
+        type="text"
+        v-model="initValue"
+        disabled
+        placeholder="请选择"
+        :class="[disabled?'input-disabled':'']"
+      />
       <div
         :class="[inputHover?'md-select-clear':'md-select-arrows',listShow?'arrows90':'arrows0']"
         @click.stop="clearClick()"
@@ -25,7 +32,7 @@
             v-for="item in options"
             :key="item.id"
             :class="{'checked':(item.value === initValue)}"
-            @click="itemClick(item.value)"
+            @click="itemClick(item.value,item.id)"
           >{{item.value}}</div>
         </div>
       </div>
@@ -35,11 +42,7 @@
 <script>
 export default {
   name: "md-select",
-  // props: {
-  //   options: {},
-  //   father:'2',
-  // },
-  props: ["options"],
+  props: ["value", "options", "clearable", "disabled"],
   watch: {},
   data() {
     return {
@@ -49,28 +52,35 @@ export default {
     };
   },
   mounted() {
-    document.addEventListener("click", e => {
-      if (!this.$el.contains(e.target)) this.listShow = false; //点击组件外的区域隐藏下拉框
+    document.addEventListener("click", (e) => {
+      if (this.listShow === false) return;
+      if (!this.$el.contains(e.target)) this.listToggle(); 
     });
   },
 
   methods: {
     listToggle() {
+      if (this.disabled) return;
       this.listShow = !this.listShow; //1.置换显示状态
+      this.$emit("visible", this.listShow);
     },
-    itemClick(arg) {
-      this.$emit("itemClick", arg);
-      this.initValue = arg; //4.选择值后input框赋值
+    itemClick(val, id) {
+      this.$emit("change", val, id);
+      this.initValue = val; //4.选择值后input框赋值
       this.listToggle();
     },
-    clearShow() {
-      if (this.initValue === "") return;
+    clearShow(e) {
+      this.$emit("focus", e);
+      if (this.disabled) return;
+      if (this.initValue === "" || !this.clearable) return;
       this.inputHover = true;
     },
-    clearHide() {
+    clearHide(e) {
+      this.$emit("blur", e);
       this.inputHover = false;
     },
     clearClick() {
+      this.$emit("clear");
       if (this.inputHover) {
         if (this.initValue != "") this.listShow = false;
         this.initValue = "";
@@ -78,6 +88,12 @@ export default {
       } else {
         this.listToggle();
       }
+    },
+    focus() {
+      this.listShow = true;
+    },
+    blur() {
+      this.listShow = false;
     }
   }
 };
@@ -169,7 +185,7 @@ export default {
   // border: 2px solid #4f77d2;
 }
 .animated {
-  animation-duration: 0.8s;
+  animation-duration: 0.5s;
   animation-fill-mode: both;
 }
 
@@ -200,5 +216,14 @@ export default {
   0% {
     opacity: 1;
   }
+}
+
+[disabled] {
+  cursor: pointer;
+}
+
+.input-disabled {
+  background-color: #eeeeee;
+  cursor: not-allowed;
 }
 </style>

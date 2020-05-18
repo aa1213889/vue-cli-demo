@@ -94,6 +94,7 @@
     box-shadow: 0 12px 20px -10px rgba(0, 188, 212, .28), 0 4px 20px 0 rgba(0, 0, 0, .12), 0 7px 8px -5px rgba(0, 188, 212, .2)!important;
 }
 
+
 .flex_box_txt {
     display: flex;
     width: 100%;
@@ -213,6 +214,10 @@
 
 .title_el30 {
     width: 30%;
+}
+
+.title_el50 {
+    width: 50%;
 }
 
 .title_el_end {
@@ -427,6 +432,10 @@
     padding-top: 100px;
 }
 
-.pt-40{
+.pt-40 {
     padding-top: 40px;
+}
+
+.width-100 {
+    width: 100%;
 }
