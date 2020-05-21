@@ -264,17 +264,12 @@
           </div>
         </div>
       </div>
-      <div class="content_row flex-col">
-        <md-radio>1</md-radio>
-        <md-radio>2</md-radio>
-      </div>
     </div>
   </div>
 </template>
 
 <script>
 import MdSelect from "./MdSelect.vue";
-import MdRadio from "../radio/MdRadio.vue";
 export default {
   name: "SelectPage",
   data() {
@@ -313,8 +308,7 @@ export default {
     msg: String
   },
   components: {
-    MdSelect,
-    MdRadio
+    MdSelect
   },
   methods: {
     changeTest(arg1, arg2) {
@@ -336,10 +330,6 @@ export default {
       this.$refs.mdselect3.focus(); //父组件调取子组件的方法
     }
   }
-
-  //1.基础用法
-  //2.是否有删除
-  //3.Select Events
 };
 </script>
 

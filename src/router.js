@@ -8,7 +8,7 @@ import HelloWorld from './components/HelloWorld';
 import InputPage from './components/input/InputPage';
 import SelectPage from './components/select/SelectPage';
 import CalendarPage from './components/calendar/CalendarPage';
-
+import RadioPage from './components/radio/RadioPage';
 Vue.use(Router) //使用vue-router
 
 export default new Router({
@@ -17,6 +17,7 @@ export default new Router({
     { path: '/input', name: 'InputPage', component: InputPage },
     { path: '/select', name: 'SelectPage', component: SelectPage },
     { path: '/calendar', name: 'CalendarPage', component: CalendarPage},
+    { path: '/radio', name: 'RadioPage', component: RadioPage },
   ],
    mode:'history',  //去掉连接#号
    linkActiveClass: 'active_row',

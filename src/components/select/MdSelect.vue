@@ -1,5 +1,5 @@
 <template>
-  <div class="md-select" :class="[disabled?'input-disabled':'']">
+  <div class="md-select" :class="[disabled?'input-disabled':'',disabled?'md-select-dis':'']">
     <div
       class="md-select-box"
       @click="listToggle()"
@@ -52,9 +52,9 @@ export default {
     };
   },
   mounted() {
-    document.addEventListener("click", (e) => {
+    document.addEventListener("click", e => {
       if (this.listShow === false) return;
-      if (!this.$el.contains(e.target)) this.listToggle(); 
+      if (!this.$el.contains(e.target)) this.listToggle();
     });
   },
 
@@ -106,6 +106,7 @@ export default {
   background-color: #ffffff;
   border-radius: 4px;
   cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.14);
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14) !important;
   .md-select-box {
     width: 100%;
@@ -150,7 +151,7 @@ export default {
     padding: 5px 0px;
     position: relative;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14) !important;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14) !important;
     border-radius: 4px;
     .md-select-angle {
       border-left: 5px solid transparent;
@@ -182,7 +183,10 @@ export default {
   }
 }
 .md-select:hover {
-  // border: 2px solid #4f77d2;
+  border: 1px solid #4f77d2;
+}
+.md-select-dis:hover {
+  border: 1px solid rgba(0, 0, 0, 0.14);
 }
 .animated {
   animation-duration: 0.5s;

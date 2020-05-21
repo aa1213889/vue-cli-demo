@@ -9,15 +9,28 @@
       </div>
       <hr class="divider" />
       <div class="menu_content_item">
-        <router-link
-          tag="div"
-          class="content_item_row"
-          v-for="item in menuArr"
-          :to="item.link"
-          :key="item.name"
-        >
+        <div class="content-item-title pt-0">Form</div>
+        <router-link tag="div" class="content_item_row" v-for="item in menuFormArr" :to="item.link" :key="item.name">
           <div class="item_row_logo" v-bind:class="item.icon"></div>
-          <div class="item_row_title">{{item.name}}</div>
+          <div class="item_row_title">{{ item.name }}</div>
+        </router-link>
+
+        <div class="content-item-title">Data</div>
+        <router-link tag="div" class="content_item_row" v-for="item in menuDataArr" :to="item.link" :key="item.name">
+          <div class="item_row_logo" v-bind:class="item.icon"></div>
+          <div class="item_row_title">{{ item.name }}</div>
+        </router-link>
+
+        <div class="content-item-title">Notice</div>
+        <router-link tag="div" class="content_item_row" v-for="item in menuNoticeArr" :to="item.link" :key="item.name">
+          <div class="item_row_logo" v-bind:class="item.icon"></div>
+          <div class="item_row_title">{{ item.name }}</div>
+        </router-link>
+
+        <div class="content-item-title">Other</div>
+        <router-link tag="div" class="content_item_row" v-for="item in menuOthersArr" :to="item.link" :key="item.name">
+          <div class="item_row_logo" v-bind:class="item.icon"></div>
+          <div class="item_row_title">{{ item.name }}</div>
         </router-link>
       </div>
       <div class="menu_content_bottombar"></div>
@@ -32,21 +45,57 @@ export default {
   data() {
     return {
       nowSelect: "Input",
-      menuArr: [
-        { name: "Input", icon: "icon_input", link: "input" },
-        { name: "Select", icon: "icon_selectbox", link: "select" },
-        { name: "Calendar", icon: "icon_calendar", link: "calendar" },
-        { name: "TreeList", icon: "icon_treelist", link: "treelist" },
-        { name: "TableGrid", icon: "icon_tablegrid", link: "tablegrid" }
-        // { name: "弹框", icon: "icon_tablegrid" },
-        // { name: "杂项", icon: "icon_tablegrid" }
-      ]
+      menuFormArr: [
+        { name: "Input 输入框", icon: "icon_input", link: "input" },
+        { name: "Select 选择器", icon: "icon_selectbox", link: "select" },
+        {
+          name: "DataPicker 日期选择",
+          icon: "icon_calendar",
+          link: "datapicker",
+        },
+        {
+          name: "TimePicker 时间选择",
+          icon: "icon_tablegrid",
+          link: "timepicker",
+        },
+        {
+          name: "InputNumber 计数器",
+          icon: "icon_tablegrid",
+          link: "inputnumber",
+        },
+        { name: "Switch 开关", icon: "icon_tablegrid", link: "switch" },
+        { name: "Slider 滑块", icon: "icon_tablegrid", link: "slider" },
+        { name: "Form 表单", icon: "icon_tablegrid", link: "form" },
+      ],
+      menuDataArr: [
+        { name: "TreeList 树形控件", icon: "icon_treelist", link: "treelist" },
+        { name: "TableGrid 表格", icon: "icon_tablegrid", link: "tablegrid" },
+        { name: "Progress 进度条", icon: "icon_tablegrid", link: "Progress" },
+      ],
+      menuNoticeArr: [
+        { name: "Alert 警告", icon: "icon_treelist", link: "alert" },
+        { name: "Loading 加载", icon: "icon_tablegrid", link: "loading" },
+        { name: "Message 消息提醒", icon: "icon_tablegrid", link: "message" },
+        { name: "MessageBox 弹框", icon: "icon_tablegrid", link: "messagebox" },
+        {
+          name: "Notification 通知",
+          icon: "icon_tablegrid",
+          link: "notification",
+        },
+      ],
+      menuOthersArr: [
+        { name: "Dialog 对话框", icon: "icon_treelist", link: "treelist" },
+        { name: "Carousel 走马灯", icon: "icon_tablegrid", link: "carousel" },
+        { name: "Calendar 日历", icon: "icon_calendar", link: "calendar" },
+        { name: "TimeLine 时间线", icon: "icon_calendar", link: "timeline" },
+        { name: "Tabs 选项卡", icon: "icon_treelist", link: "tabs" },
+      ],
     };
   },
   props: {
-    msg: String
+    msg: String,
   },
-  methods: {}
+  methods: {},
 };
 </script>
 
@@ -106,9 +155,9 @@ export default {
 }
 .menu_content_item {
   width: 90%;
-  height: calc(100% - 200px);
-  /* border: solid 1px salmon; */
+  height: calc(100% - 110px);
   padding-top: 20px;
+  overflow: auto;
 }
 .content_item_row {
   border-radius: 4px;
@@ -156,5 +205,12 @@ export default {
 .icon_tablegrid {
   background: url(../assets/menu/TableGrid.png);
   background-size: cover;
+}
+.content-item-title {
+  color: #fff;
+  padding-top: 20px;
+}
+.pt-0 {
+  padding-top: 0px;
 }
 </style>
