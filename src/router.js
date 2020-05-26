@@ -5,10 +5,10 @@ import Router from 'vue-router' // 引入vue-router
 
 //组件模块
 import HelloWorld from './components/HelloWorld';
-import InputPage from './components/input/InputPage';
-import SelectPage from './components/select/SelectPage';
-import CalendarPage from './components/calendar/CalendarPage';
-import RadioPage from './components/radio/RadioPage';
+import InputPage from './components/form/input/InputPage';
+import SelectPage from './components/form/select/SelectPage';
+import RadioPage from './components/form/radio/RadioPage';
+import SwitchPage from './components/form/switch/SwitchPage';
 Vue.use(Router) //使用vue-router
 
 export default new Router({
@@ -16,10 +16,10 @@ export default new Router({
     { path: '/sb', name: 'HelloWorld', component: HelloWorld },
     { path: '/input', name: 'InputPage', component: InputPage },
     { path: '/select', name: 'SelectPage', component: SelectPage },
-    { path: '/calendar', name: 'CalendarPage', component: CalendarPage},
     { path: '/radio', name: 'RadioPage', component: RadioPage },
+    { path: '/switch', name: 'SwitchPage', component: SwitchPage },
   ],
-   mode:'history',  //去掉连接#号
-   linkActiveClass: 'active_row',
+  mode: 'history',  //去掉连接#号
+  linkActiveClass: 'active_row',
   // linkExactActiveClass: 'active_row',
 })

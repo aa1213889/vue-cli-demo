@@ -186,7 +186,7 @@
 </template>
 
 <script>
-import MdSelect from "../select/MdSelect";
+import MdSelect from "../form/select/MdSelect";
 export default {
   name: "InputPage",
   props: {

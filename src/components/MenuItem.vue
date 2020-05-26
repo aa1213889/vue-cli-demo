@@ -47,7 +47,7 @@ export default {
       nowSelect: "Input",
       menuFormArr: [
         { name: "Input 输入框", icon: "icon_input", link: "input" },
-        { name: "Select 选择器", icon: "icon_selectbox", link: "select" },
+        { name: "Select 下拉选择", icon: "icon_selectbox", link: "select" },
         {
           name: "DataPicker 日期选择",
           icon: "icon_calendar",
@@ -63,6 +63,8 @@ export default {
           icon: "icon_tablegrid",
           link: "inputnumber",
         },
+        { name: "Radio 单选框", icon: "icon_selectbox", link: "radio" },
+        { name: "Checkbox 多选框", icon: "icon_selectbox", link: "checkbox" },
         { name: "Switch 开关", icon: "icon_tablegrid", link: "switch" },
         { name: "Slider 滑块", icon: "icon_tablegrid", link: "slider" },
         { name: "Form 表单", icon: "icon_tablegrid", link: "form" },

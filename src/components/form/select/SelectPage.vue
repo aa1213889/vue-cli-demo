@@ -334,8 +334,8 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import "../../assets/css/page.css";
-@import "../../assets/css/preCode.less";
+@import "../../../assets/css/page.css";
+@import "../../../assets/css/preCode.less";
 .selectpage {
   background: #fff;
 }

@@ -242,63 +242,63 @@ export default {
 </script>
 
 <style scoped>
-@import "../../assets/css/page.css";
+@import "../../../assets/css/page.css";
 .logo_shop {
-  background: url(../../assets/demo/shop.png);
+  background: url(../../../assets/demo/shop.png);
   background-size: cover;
 }
 .logo_hint {
-  background: url(../../assets/demo/hint_logo.png);
+  background: url(../../../assets/demo/hint_logo.png);
   background-size: cover;
 }
 .logo_misscall {
   width: 20px;
   height: 20px;
-  background: url(../../assets/demo/missed_calls.png);
+  background: url(../../../assets/demo/missed_calls.png);
   background-size: cover;
 }
 .logo_rise {
   width: 20px;
   height: 20px;
-  background: url(../../assets/demo/rise.png);
+  background: url(../../../assets/demo/rise.png);
   background-size: cover;
 }
 
 .logo_warn {
-  background: url(../../assets/demo/warn_logo.png);
+  background: url(../../../assets/demo/warn_logo.png);
   background-size: cover;
 }
 .logo_phonebook {
-  background: url(../../assets/demo/phonebook.png);
+  background: url(../../../assets/demo/phonebook.png);
   background-size: cover;
 }
 
 .logo_file {
-  background: url(../../assets/demo/file.png);
+  background: url(../../../assets/demo/file.png);
   background-size: cover;
 }
 
 .logo_stock {
-  background: url(../../assets/demo/stock.png);
+  background: url(../../../assets/demo/stock.png);
   background-size: cover;
 }
 
 .logo_bugs {
-  background: url(../../assets/demo/bug.png);
+  background: url(../../../assets/demo/bug.png);
   background-size: cover;
 }
 
 .logo_web {
   width: 25px;
   height: 25px;
-  background: url(../../assets/demo/web.png);
+  background: url(../../../assets/demo/web.png);
   background-size: cover;
 }
 
 .logo_server {
   width: 21px;
   height: 15px;
-  background: url(../../assets/demo/server.png);
+  background: url(../../../assets/demo/server.png);
   background-size: cover;
 }
 
