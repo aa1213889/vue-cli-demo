@@ -15,14 +15,8 @@
         <div class="content-example">
           <div class="content-example-header">
             <div class="content-example-box">
-              <md-select
-                :options="options"
-                @change="changeTest"
-                @visible="visibleTest"
-                @focus="focusTest"
-                @blur="blurTest"
-                ref="mdselect1"
-              ></md-select>
+              <md-select :options="options" @change="changeTest" @visible="visibleTest" @focus="focusTest"
+                @blur="blurTest" ref="mdselect1"></md-select>
             </div>
           </div>
           <div class="content-example-body">
