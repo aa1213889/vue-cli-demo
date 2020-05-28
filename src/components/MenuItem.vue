@@ -75,8 +75,6 @@ export default {
         { name: "Progress 进度条", icon: "icon_tablegrid", link: "Progress" },
       ],
       menuNoticeArr: [
-        { name: "Alert 警告", icon: "icon_treelist", link: "alert" },
-        { name: "Loading 加载", icon: "icon_tablegrid", link: "loading" },
         { name: "Message 消息提醒", icon: "icon_tablegrid", link: "message" },
         { name: "MessageBox 弹框", icon: "icon_tablegrid", link: "messagebox" },
         {
@@ -86,7 +84,6 @@ export default {
         },
       ],
       menuOthersArr: [
-        { name: "Dialog 对话框", icon: "icon_treelist", link: "treelist" },
         { name: "Carousel 走马灯", icon: "icon_tablegrid", link: "carousel" },
         { name: "Calendar 日历", icon: "icon_calendar", link: "calendar" },
         { name: "TimeLine 时间线", icon: "icon_calendar", link: "timeline" },

@@ -20,7 +20,7 @@ export default {
   },
   mounted() {
     if (this.disabled === '') this.isDisabled = true;
-    if (this.text) this.isTextShow = true, this.text = this.text + '：';
+    if (this.text) { this.isTextShow = true, this.text = this.text + '：' }
     this.clickBool = this.keys;
   },
   //1.基础用法 2.文字描述 3.禁用状态
@@ -69,7 +69,7 @@ export default {
       box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14) !important;
     }
     .md-core-cir-checked {
-      background-color: rgb(0,151,137);
+      background-color: rgb(0, 151, 137);
       margin-left: calc(100% - 12px);
       transition: background-color 0.3s, margin-left 0.3s;
     }
