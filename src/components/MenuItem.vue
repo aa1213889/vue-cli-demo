@@ -9,6 +9,12 @@
       </div>
       <hr class="divider" />
       <div class="menu_content_item">
+        <div class="content-item-title pt-0">HomePage</div>
+        <router-link tag="div" class="content_item_row" v-for="item in menuFormHome" :to="item.link" :key="item.name">
+          <div class="item_row_logo" v-bind:class="item.icon"></div>
+          <div class="item_row_title">{{ item.name }}</div>
+        </router-link>
+
         <div class="content-item-title pt-0">Form</div>
         <router-link tag="div" class="content_item_row" v-for="item in menuFormArr" :to="item.link" :key="item.name">
           <div class="item_row_logo" v-bind:class="item.icon"></div>
@@ -45,6 +51,9 @@ export default {
   data() {
     return {
       nowSelect: "Input",
+      menuFormHome: [
+        { name: "首页", icon: "icon_input", link: "homepage" }
+      ],
       menuFormArr: [
         { name: "Input 输入框", icon: "icon_input", link: "input" },
         { name: "Select 下拉选择", icon: "icon_selectbox", link: "select" },

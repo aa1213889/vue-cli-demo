@@ -19,13 +19,7 @@
                   </v-tooltip>
                   <v-tooltip right>
                     <template v-slot:activator="{ on }">
-                      <v-btn
-                        icon
-                        large
-                        href="https://codepen.io/johnjleider/pen/pMvGQO"
-                        target="_blank"
-                        v-on="on"
-                      >
+                      <v-btn icon large href="https://codepen.io/johnjleider/pen/pMvGQO" target="_blank" v-on="on">
                         <v-icon>mdi-codepen</v-icon>
                       </v-btn>
                     </template>
@@ -36,13 +30,7 @@
                   <v-form>
                     <v-text-field label="Login" name="login" prepend-icon="person" type="text" />
 
-                    <v-text-field
-                      id="password"
-                      label="Password"
-                      name="password"
-                      prepend-icon="lock"
-                      type="password"
-                    />
+                    <v-text-field id="password" label="Password" name="password" prepend-icon="lock" type="password" />
                   </v-form>
                 </v-card-text>
                 <v-card-actions>
@@ -66,7 +54,7 @@ export default {
     msg: String
   },
   methods: {
-    clickLink: function() {
+    clickLink: function () {
       this.$router.push("./sb");
     }
   }

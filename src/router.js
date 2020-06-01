@@ -5,6 +5,7 @@ import Router from 'vue-router' // 引入vue-router
 
 //组件模块
 import HelloWorld from './components/HelloWorld';
+import HomePage from './components/homepage/HomePage';
 import InputPage from './components/form/input/InputPage';
 import SelectPage from './components/form/select/SelectPage';
 import RadioPage from './components/form/radio/RadioPage';
@@ -14,6 +15,7 @@ Vue.use(Router) //使用vue-router
 export default new Router({
   routes: [
     { path: '/sb', name: 'HelloWorld', component: HelloWorld },
+    { path: '/homepage', name: 'HomePage', component: HomePage },
     { path: '/input', name: 'InputPage', component: InputPage },
     { path: '/select', name: 'SelectPage', component: SelectPage },
     { path: '/radio', name: 'RadioPage', component: RadioPage },
